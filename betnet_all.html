@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset='UTF-8'></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+
+	<style type="text/css">
+
+
+		*{
+			margin:0;
+			padding: 0;
+		}
+
+
+		body{
+
+			background: darkBlue;
+
+			color:rgb(0,255,0,0.7);
+
+			font-size : 0.8vw;
+		}
+
+
+
+		 #navBar{
+		  position:fixed;
+		  z-index:2;
+		  top:0px;
+		  left:0px;
+		  height:10%;
+		  width:100%;
+		  background:black;
+		  display:flex;
+		  justify-content: space-around;
+		  align-items: center;
+		}
+
+		#championshipInfoDiv{
+
+			display: none;
+		}
+
+	    .navBarA{
+
+	      height: 80%;
+	      width: 60%;
+	      background: red;
+	      display: flex;
+	      flex-direction: row;
+	      align-items: center;
+	      justify-content: space-around;
+
+
+	    }
+
+	    .navBarB{
+	      height:80%;
+	      width:20%;
+	      background: blue;
+	      display: flex;
+	      justify-content: center;
+	      align-items: center;
+
+	    }
+
+	    #logoDiv{
+
+	    	height: 6vh;
+
+	    	width: 6vh;
+
+	    	background: grey;
+	    }
+
+	    .navBarTeam{
+	    	height:90%;
+	    	width: 15%;
+	    	background: purple;
+	    }
+
+
+
+
+	    #teamsDiv{
+	    	position: absolute;
+	    	z-index:1;
+	    	top:10%;
+	    	left:0px;
+	    	height: 180%;
+	    	width: 100%;
+	    	background: rgb(255,255,255,0.15);
+	    	display: flex;
+	    	flex-direction: column;
+	    	align-items: center;
+	    	justify-content: space-around;
+	    }
+
+
+	    .gameDiv{
+	    	height: 8%;
+	    	width: 95%;
+	    	background: rgb(255,255,255,0.15);
+	    	display: flex;
+	    	justify-content: space-around;
+	    	align-items: center;
+
+	    }
+
+
+
+	    .gameDivTeam{
+
+	    	height: 80%;
+	    	width: 35%;
+	    	display: flex;
+	    	justify-content: center;
+	    	align-items: center;
+	    	position: relative;
+
+	    }
+
+	    .teamDescription{
+
+	    	display: none;
+	    }
+
+
+	
+	    
+
+
+	    .gameDivMiddle{
+
+	      height: 80%;
+	      width: 15%;
+	      background: rgb(255,255,255,0.15);
+	      display: flex;
+	      justify-content: center;
+	      align-items: center;
+	      border-radius:10px;
+
+
+	    }
+
+	    .teamImg{
+
+	    	height: 90%;
+	    	width: auto;
+	    }
+
+	    .graphImg{
+
+	    	height: 80%;
+	    	width: auto;
+
+	    }
+
+
+	    .graphBtnContainer{
+
+	    	display:flex;
+	    	justify-content:center;
+	    	align-items:center;
+	    	height: 7.5vh;
+	    	width: 7.5vh;
+	    	border-radius: 30px;
+	    }
+
+
+
+
+
+	  @media only screen and (min-width: 800px){
+
+
+
+	    #teamsDiv{
+
+	      position: absolute;
+	      top:15%;
+	      left:5%;
+	      height: 180%;
+	      width: 70%;
+	      background: rgb(255,255,255,0.15);
+	      display: flex;
+	      flex-direction: column;
+	      align-items: center;
+	      justify-content: space-around;
+	      border-radius: 15px;
+
+	    }
+
+
+
+
+	   #championshipInfoDiv{
+
+	   	  position: fixed;
+	   	  top:15%;
+	   	  width:19%;
+	   	  height:80%;
+	   	  right:2.5%;
+	      border-radius:15px;
+	      display:flex;
+	      flex-direction:column;
+	      align-items:center;
+	      justify-content:space-around;
+	      background: rgb(255,255,255,0.15);
+
+	    }
+
+
+
+	     #championshipInfoDivA{
+
+	    	height: 15%;
+	    	width: 80%;
+	    	background: red;
+	    	display: flex;
+	    	align-items: center;
+	    	justify-content: center;
+
+	     }
+
+
+	         .teamDescription{
+
+            position: absolute;
+	    	top: 5%;
+	    	height: 90%;
+	    	width: 25%;
+	    	background: rgb(255,255,255,0.15);
+	    	border-radius: 10px;
+	    	display: flex;
+	    	flex-direction: column;
+	    	justify-content: space-around;
+	    	align-items: center;
+
+	    }
+
+
+	    .gameDivAwayTeamDescription{
+
+	    	right:0.25%;
+	    
+	    }
+
+
+
+
+	    .gameDivHomeTeamDescription{
+
+	    	left: 0.25%;
+	
+	    }
+
+
+
+
+
+
+
+
+	   .teamDescriptionA{
+
+	   	   height: 30%;
+	   	   width: 85%;
+	   	   display: flex;
+	   	   flex-direction: row;
+	   	   padding-right:1%;
+	   	   justify-content: flex-start;
+	   	   align-items: center;
+
+	    }
+
+	    .teamDescriptionB{
+
+		   height: 30%;
+	   	   width: 85%;
+	   	   display: flex;
+	   	   flex-direction: row;
+	   	   padding-right:1%;
+	   	   justify-content: flex-start;
+	   	   align-items: center;
+
+
+	    }
+
+	    .teamDescriptionC{
+
+	       height: 30%;
+	   	   width: 85%;
+	   	   display: flex;
+	   	   flex-direction: row;
+	   	   padding-right:1%;
+	   	   justify-content: flex-start;
+	   	   align-items: center;
+
+	   	  }
+
+
+
+
+
+
+
+
+
+		 }
+		
+	
+
+
+
+	</style>
+     
+
+
+     <div id='navBar'>
+
+     	<div class='navBarA'>
+     		 <div class='navBarTeam' id='navBarAteamA'></div>
+     		 <div class='navBarTeam' id='navBarAteamB'></div>
+     		 <div class='navBarTeam' id='navBarAteamC'></div>
+     		 <div class='navBarTeam' id='navBarAteamD'></div>
+     		 <div class='navBarTeam' id='navBarAteamE'></div>
+
+     	</div>
+
+
+     	<div class='navBarB'>
+
+     		 <div id='logoDiv'></div>
+     		
+     	</div>
+     	
+     </div>
+
+
+     <div id='teamsDiv'>
+
+     	<div class='gameDiv'>
+
+     		<div class='gameDivTeam'>
+     			<div class='gameDivHomeTeamDescription teamDescription'>
+     				 <div class='teamDescriptionA'>name: PSG</div>
+     			  	  <div class='teamDescriptionB'>position: 1st</div>
+     			  	  <div class='teamDescriptionC'>rank: A</div>
+     			</div>
+     			<img class='teamImg' src="img/psg.png">
+     		</div>
+     		<div class='gameDivMiddle'>
+     			 <div class='graphBtnContainer'>
+     			 	    <img class='graphImg' src="img/graph.png">
+     			 </div>
+     		</div>
+     		<div class='gameDivTeam'>
+     			  <div class='gameDivAwayTeamDescription teamDescription'>
+     			  	  <div class='teamDescriptionA'>name: Lille</div>
+     			  	  <div class='teamDescriptionB'>position: 2nd</div>
+     			  	  <div class='teamDescriptionC'>rank : A</div>
+     		
+     			  </div>
+
+     			 <img class='teamImg' src="img/losc.png">
+
+     		</div>
+
+     		
+
+     	</div>
+
+     	<div class='gameDiv'>
+
+
+     	</div>
+
+     	<div class='gameDiv'>
+     		
+
+     	</div>
+
+     		<div class='gameDiv'>
+     		
+
+     	</div>
+
+     		<div class='gameDiv'>
+     		
+
+     	</div>
+
+     	     	<div class='gameDiv'>
+     		
+
+     	</div>
+
+     		<div class='gameDiv'>
+     		
+
+     	</div>
+
+     		<div class='gameDiv'>
+     		
+
+     	</div>
+
+     		<div class='gameDiv'>
+     		
+
+     	</div>
+
+     		<div class='gameDiv'>
+     		
+
+     	</div>
+
+
+
+
+     </div>
+
+
+
+     <div id='championshipInfoDiv'>
+
+
+     	<div id='championshipInfoDivA'>day: 29</div>
+     	<div id='championshipInfoDivA'>Avg.goal scored/game : 2.09</div>
+     	<div id='championshipInfoDivA'>1st team : Lyon</div>
+     	<div id='championshipInfoDivA'>Best attack : Paris</div>
+     	<div id='championshipInfoDivA'>Best defense : Paris</div>
+
+ 
+
+     </div>
+
+</body>
+</html>
